@@ -53,7 +53,7 @@ app.post('/items', function(req, res) {
         name: req.body.name
     }, function(err, item) {
         if (err) {
-            return res.status(500).json({
+            return res.status(400).json({
                 message: 'Internal Server Error'
             });
         }
@@ -65,10 +65,12 @@ app.put('/items/:id', function(req, res) {
     Item.findOneAndUpdate({
         _id: req.params.id
     }, {
-        name: req.body.name
+        $set: {name: req.body.name}
+    }, {
+        upsert: true
     }, function(err, item) {
         if (err) {
-            return res.status(500).json({
+            return res.status(400).json({
                 message: 'Internal Server Error'
             });
         }
@@ -81,11 +83,17 @@ app.delete('/items/:id', function(req, res) {
         _id: req.params.id
     }, function(err, item) {
         if(err) {
-            return res.status(500).json({
+            return res.status(400).json({
                 message: 'Internal Server Error'
             });
         }
          res.status(200).json(item);
+    });
+});
+
+app.delete('/items', function(req, res) {
+    return res.status(400).json({
+        message: 'Internal Server Error'
     });
 });
 
