@@ -84,7 +84,7 @@ app.delete('/items/:id', function(req, res) {
     }, function(err, item) {
         if(err) {
             return res.status(400).json({
-                message: 'Internal Server Error'
+                message: 'Internal Server Error '
             });
         }
          res.status(200).json(item);

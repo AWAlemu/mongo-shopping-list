@@ -180,7 +180,7 @@ describe('Shopping List', function() {
             });
     });
     
-    it('should DELETE without an ID in the endpoint', function(done) {
+    it('should DELETE without an ID in the endpoint ', function(done) {
         chai.request(app)
             .delete('/items')
             .send({'id': 1})
