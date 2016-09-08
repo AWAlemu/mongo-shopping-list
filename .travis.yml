@@ -8,3 +8,10 @@ addons:
     - mongodb-3.2-precise
     packages:
     - mongodb-org-server
+deploy:
+  provider: heroku
+  api_key:
+    secure: DcPjc4ZuacNVzbso7bl2lvubmt6llA/ZMkZqDpLZlNOg+jz1iuXswh7wxseWitPzReDTdQP29X5GVAz/b1QcIgEyWAmNC5nuhqBD6PPr3Y3rfnWcDuk8uYtSBzPUawZ2frUDY/HkDqbN0NN7GkQQ+r4q7ozn0r/atjBp03BlJbRYcYskRAbEe06HnIzYN8POClWi5JGktNH+Jo2s/ZYbVqccrag+jzDS1IripBPv9Z+9Ly3jaj8wTptwmJ9e7WyyVs1XOd44Bp/P3T4G7X+uDGkEL6AdPCARKpE1x+AfgZk00FsMQzNo7c4KcLjRqhc4jWFAF44ADnfIt84bePj0+FA0eX0Kf6RbmqVq0rMrHvf7fec44bBbMJoTXRGlNaac2nchr4n/HXbYkDraKhyYcYEr23eEL8UfGo6nmvp5mnkGd4YFzsloJZfRcNkIwRaSKZf+pwQN3/yeqvynedJtB6vv+VF9GIr0bbDUIdXapQfJgCSKbhAssfnJ/oLSamBkZdmo5mZJ8LGTqWP4kDd3VYfnrd1UOO0Jix50hrLkJm4Az8Y9ZVRCZYKn4HqtI1FIGAXuVlAxfkk3GJuY1HQM+w1nmMwcwDHeTRmvxQAKBhZBvX97k4mEeOGhpKQ5bFL2EMIhscxhUsCnZ5oL3xqIzEIBkF4/XuYra1j+cNjr/zU=
+  app: peaceful-eyrie-95805
+  on:
+    repo: AWAlemu/mongo-shopping-list
