@@ -1,6 +1,6 @@
 exports.DATABASE_URL = process.env.DATABASE_URL ||
                        global.DATABASE_URL ||
                        (process.env.NODE_ENV === 'production' ?
-                            'mongodb://awalemu:57d09c17ee09c21e3cd9ae6f@ds019906.mlab.com:19906/contdeployment':
-                            'mongodb://awalemu:57d09c17ee09c21e3cd9ae6f@ds019906.mlab.com:19906/contdeployment');
+                            'mongodb://mongouser:a451030@ds011291.mlab.com:11291/mongo':
+                            'mongodb://mongouser:a451030@ds011291.mlab.com:11291/mongo');
 exports.PORT = process.env.PORT || 8080;
